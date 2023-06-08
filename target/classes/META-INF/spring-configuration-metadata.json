@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "cn.ze.tool.whitelist",
+      "type": "cn.ze.tool.middleware.whitelist.config.WhiteListProperties",
+      "sourceType": "cn.ze.tool.middleware.whitelist.config.WhiteListProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cn.ze.tool.whitelist.users",
+      "type": "java.lang.String",
+      "sourceType": "cn.ze.tool.middleware.whitelist.config.WhiteListProperties"
+    }
+  ],
+  "hints": []
+}
