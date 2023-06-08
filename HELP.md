@@ -1,5 +1,10 @@
 # Getting Started
 
+1. 克隆本仓库
+2. 使用maven install
+3. 在
+
+
 ### Reference Documentation
 
 For further reference, please consider the following sections:
