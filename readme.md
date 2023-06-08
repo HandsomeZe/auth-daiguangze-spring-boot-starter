@@ -1,4 +1,4 @@
-# 如何使用
+# 快速开始
 1. 克隆本仓库
 ```shell
 https://github.com/HandsomeZe/whitelist-daiguangze-spring-boot-starter.git
@@ -29,3 +29,24 @@ public class ApiTestApplication {
 
 }
 ```
+
+5. 在application.yml中配置白名单用户
+```yaml
+# 白名单用户 简单用法
+cn:
+  ze:
+    tool:
+      whitelist:
+        users: aaa,111,daiguangze
+
+```
+
+6. 在需要的controller上添加 @ DoWhiteList 注解
+```java
+    @DoWhiteList(key = "userId", returnJson = "{\"code\":\"1111\",\"info\":\"非白名单可访问用户拦截！\"}")
+    @RequestMapping(path = "/api/queryUserInfo", method = RequestMethod.GET)
+    public UserInfo queryUserInfo(@RequestParam String userId) {
+        return "hello";
+    }
+```
+当传入的userID为配置的users中之外的人员时,返回returnJson
